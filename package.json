@@ -1,6 +1,6 @@
 {
   "name": "@gethappy/cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CLI for dash.gethappy.dev",
   "author": "dphuang2 @dphuang2",
   "bin": {
@@ -46,8 +46,7 @@
     "dirname": "happy",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-help"
     ],
     "topicSeparator": " ",
     "topics": {}
