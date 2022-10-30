@@ -22,7 +22,7 @@ $ npm install -g happy-cli
 $ happy COMMAND
 running command...
 $ happy (--version)
-happy-cli/0.0.2 darwin-arm64 node-v16.15.0
+happy-cli/0.0.3 darwin-arm64 node-v16.15.0
 $ happy --help [COMMAND]
 USAGE
   $ happy COMMAND
@@ -63,7 +63,7 @@ EXAMPLES
   $ happy deploy
 ```
 
-_See code: [dist/commands/deploy.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.2/dist/commands/deploy.ts)_
+_See code: [dist/commands/deploy.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.3/dist/commands/deploy.ts)_
 
 ## `happy help [COMMAND]`
 
