@@ -3,10 +3,10 @@
 CLI for dash.gethappy.dev
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
+[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://www.npmjs.com/package/@gethappy/cli)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://www.npmjs.com/package/@gethappy/cli)
+[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/dphuang2/happy-cli/blob/master/package.json)
 
 <!-- toc -->
 * [happy-cli](#happy-cli)
@@ -22,7 +22,7 @@ $ npm install -g @gethappy/cli
 $ happy COMMAND
 running command...
 $ happy (--version)
-@gethappy/cli/0.0.7 darwin-arm64 node-v16.15.0
+@gethappy/cli/0.0.8 darwin-arm64 node-v16.15.0
 $ happy --help [COMMAND]
 USAGE
   $ happy COMMAND
@@ -51,7 +51,7 @@ EXAMPLES
   $ happy deploy
 ```
 
-_See code: [dist/commands/deploy.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.7/dist/commands/deploy.ts)_
+_See code: [dist/commands/deploy.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.8/dist/commands/deploy.ts)_
 
 ## `happy help [COMMAND]`
 
