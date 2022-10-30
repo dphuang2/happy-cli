@@ -20,7 +20,7 @@ $ npm install -g happy-cli
 $ happy COMMAND
 running command...
 $ happy (--version)
-happy-cli/0.0.0 darwin-arm64 node-v16.15.0
+happy-cli/0.0.1 darwin-arm64 node-v16.15.0
 $ happy --help [COMMAND]
 USAGE
   $ happy COMMAND
@@ -64,7 +64,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.1/dist/commands/hello/index.ts)_
 
 ## `happy hello world`
 
