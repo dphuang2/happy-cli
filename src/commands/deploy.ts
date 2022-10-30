@@ -14,7 +14,7 @@ export default class Deploy extends Command {
   ]
 
   static flags = {
-    dev: Flags.boolean({char: 'f'}),
+    dev: Flags.boolean({char: 'd'}),
   }
 
   static args = []
