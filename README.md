@@ -18,11 +18,11 @@ CLI for dash.gethappy.dev
 
 <!-- usage -->
 ```sh-session
-$ npm install -g happy-cli
+$ npm install -g @gethappy/cli
 $ happy COMMAND
 running command...
 $ happy (--version)
-happy-cli/0.0.5 darwin-arm64 node-v16.15.0
+@gethappy/cli/0.0.5 darwin-arm64 node-v16.15.0
 $ happy --help [COMMAND]
 USAGE
   $ happy COMMAND

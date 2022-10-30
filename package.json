@@ -1,5 +1,5 @@
 {
-  "name": "happy-cli",
+  "name": "@gethappy/cli",
   "version": "0.0.5",
   "description": "CLI for dash.gethappy.dev",
   "author": "dphuang2 @dphuang2",
