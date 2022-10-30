@@ -4,14 +4,7 @@ describe('deploy', () => {
   test
   .stdout()
   .command(['deploy'])
-  .it('runs hello', ctx => {
-    expect(ctx.stdout).to.contain('hello world')
-  })
-
-  test
-  .stdout()
-  .command(['deploy', '--name', 'jeff'])
-  .it('runs hello --name jeff', ctx => {
-    expect(ctx.stdout).to.contain('hello jeff')
+  .it('runs deploy', ctx => {
+    expect(ctx.stdout).to.contain('Successfully deployed!')
   })
 })

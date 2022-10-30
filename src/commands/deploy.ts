@@ -20,12 +20,9 @@ export default class Deploy extends Command {
   static args = []
 
   public async run(): Promise<void> {
-    // const {} = await this.parse(Deploy)
-    console.log(process.cwd())
-    const root = findWorkspaceRoot()
-    if (root === null) throw new Error('Could not find yarn workspace root')
+    const root = findWorkspaceRoot() ?? './'
     process.chdir(root)
-    const f = fs.readFileSync(`${findWorkspaceRoot()}/.gitignore`, 'utf-8')
+    const f = fs.readFileSync(`${root}/.gitignore`, 'utf-8')
     const ig = ignore().add(f.split('\n'))
 
     const archivePath = generateArchivePath()
@@ -41,6 +38,8 @@ export default class Deploy extends Command {
       return !ig.ignores(relativePath)
     }}, ['./'])
 
-    console.log(archivePath)
+    this.debug(archivePath)
+
+    this.log('Successfully deployed!')
   }
 }
