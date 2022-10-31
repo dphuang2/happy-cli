@@ -29,6 +29,7 @@ USAGE
 <!-- commands -->
 * [`happy deploy`](#happy-deploy)
 * [`happy help [COMMAND]`](#happy-help-command)
+* [`happy login`](#happy-login)
 
 ## `happy deploy`
 
@@ -66,4 +67,21 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.16/src/commands/help.ts)_
+
+## `happy login`
+
+Login to dash.gethappy.dev
+
+```
+USAGE
+  $ happy login
+
+DESCRIPTION
+  Login to dash.gethappy.dev
+
+EXAMPLES
+  $ happy login
+```
+
+_See code: [dist/commands/login.ts](https://github.com/dphuang2/happy-cli/blob/v0.0.11/dist/commands/login.ts)_
 <!-- commandsstop -->
