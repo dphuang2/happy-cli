@@ -21,6 +21,7 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.5",
     "axios": "0.27.2",
+    "cookie": "^0.5.0",
     "find-yarn-workspace-root": "^2.0.0",
     "ignore": "^5.2.0",
     "tar": "^6.1.11"
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@oclif/test": "^2.2.6",
     "@types/chai": "^4",
+    "@types/cookie": "^0.5.1",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.2",
     "@types/tar": "^6.1.3",
