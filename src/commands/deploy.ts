@@ -5,7 +5,8 @@ import * as tar from 'tar'
 import ignore from 'ignore'
 import {generateArchivePath} from '../util/generate-archive-path'
 import path = require('node:path')
-
+import {generateApiUrl} from '../util/generate-api-url'
+import axios from 'axios'
 export default class Deploy extends Command {
   static description = 'Deploy to dash.gethappy.dev'
 
@@ -20,12 +21,16 @@ export default class Deploy extends Command {
   static args = []
 
   public async run(): Promise<void> {
-    const root = findWorkspaceRoot() ?? './'
+    const {flags} = await this.parse(Deploy)
+
+    const root = findWorkspaceRoot() ?? '.'
+    this.debug('root:', root)
     process.chdir(root)
     const f = fs.readFileSync(`${root}/.gitignore`, 'utf-8')
     const ig = ignore().add(f.split('\n'))
 
     const archivePath = generateArchivePath()
+    this.debug('archivePath:', archivePath)
 
     await tar.c({gzip: true, file: archivePath, filter(p) {
       const relativePath = path.relative(root, p)
@@ -38,7 +43,14 @@ export default class Deploy extends Command {
       return !ig.ignores(relativePath)
     }}, ['./'])
 
-    this.debug(archivePath)
+    const apiUrl = generateApiUrl(flags.dev)
+    this.debug('apiUrl:', apiUrl)
+
+    const body = fs.readFileSync(archivePath)
+    const {data} = await axios.get(apiUrl)
+    this.debug('uploadUrl:', data.uploadUrl)
+
+    await axios.put(data.uploadUrl, body)
 
     this.log('Successfully deployed!')
   }
