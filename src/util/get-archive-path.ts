@@ -1,6 +1,6 @@
-import {ARCHIVE_DIR, ensureConfigSetup} from './ensure-config-setup'
+import {archiveDir, ensureConfigSetup} from './ensure-config-setup'
 
-export const getArchivePath = (): string => {
-  ensureConfigSetup()
-  return `${ARCHIVE_DIR}/${new Date().toISOString()}.tgz`
+export const getArchivePath = (dev: boolean): string => {
+  ensureConfigSetup(dev)
+  return `${archiveDir(dev)}/${new Date().toISOString()}.tgz`
 }

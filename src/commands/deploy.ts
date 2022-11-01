@@ -25,7 +25,7 @@ export default class Deploy extends Command {
   public async run(): Promise<void> {
     const {flags} = await this.parse(Deploy)
 
-    const sessionToken = getSessionToken()
+    const sessionToken = getSessionToken(flags.dev)
     this.debug('sessionToken:', sessionToken)
 
     if (sessionToken === null) {
@@ -39,7 +39,7 @@ export default class Deploy extends Command {
     const f = fs.readFileSync(`${root}/.gitignore`, 'utf-8')
     const ig = ignore().add(f.split('\n'))
 
-    const archivePath = getArchivePath()
+    const archivePath = getArchivePath(flags.dev)
     this.debug('archivePath:', archivePath)
 
     await tar.c({
@@ -64,7 +64,7 @@ export default class Deploy extends Command {
         headers: {
           'auth-provider': 'dbAuth',
           'Content-Type': 'application/json',
-          authorization: `Bearer ${getUserId()}`,
+          authorization: `Bearer ${getUserId(flags.dev)}`,
           Cookie: `session=${sessionToken}`,
         },
       })

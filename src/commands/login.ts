@@ -42,9 +42,9 @@ export default class Login extends Command {
         this.error('Unexpected return value')
       }
 
-      this.debug('userIdPath:', getUserIdPath())
+      this.debug('userIdPath:', getUserIdPath(flags.dev))
       this.debug('userId:', userId)
-      fs.writeFileSync(getUserIdPath(), userId.toString())
+      fs.writeFileSync(getUserIdPath(flags.dev), userId.toString())
 
       const cookies = parse(cookieString)
 
@@ -53,7 +53,7 @@ export default class Login extends Command {
         this.error('Could not find session cookie')
       }
 
-      fs.writeFileSync(getSessionTokenPath(), session)
+      fs.writeFileSync(getSessionTokenPath(flags.dev), session)
       this.log(`Successfuly logged in as ${email}`)
     } catch (error) {
       if (!(error instanceof AxiosError)) {

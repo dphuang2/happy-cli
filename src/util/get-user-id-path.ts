@@ -1,6 +1,6 @@
-import {ensureConfigSetup, HAPPY_DIR} from './ensure-config-setup'
+import {ensureConfigSetup, happyDir} from './ensure-config-setup'
 
-export const getUserIdPath = (): string => {
-  ensureConfigSetup()
-  return `${HAPPY_DIR}/user.txt`
+export const getUserIdPath = (dev: boolean): string => {
+  ensureConfigSetup(dev)
+  return `${happyDir(dev)}/user.txt`
 }

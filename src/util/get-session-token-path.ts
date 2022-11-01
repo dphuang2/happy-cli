@@ -1,6 +1,6 @@
-import {ensureConfigSetup, HAPPY_DIR} from './ensure-config-setup'
+import {ensureConfigSetup, happyDir} from './ensure-config-setup'
 
-export const getSessionTokenPath = (): string => {
-  ensureConfigSetup()
-  return `${HAPPY_DIR}/session.txt`
+export const getSessionTokenPath = (dev: boolean): string => {
+  ensureConfigSetup(dev)
+  return `${happyDir(dev)}/session.txt`
 }
