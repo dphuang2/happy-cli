@@ -55,12 +55,11 @@ export default class Deploy extends Command {
       },
     }, ['./'])
 
-    const deployApiUrl = `${getApiOrigin(flags)}/deploy`
-    this.debug('apiUrl:', deployApiUrl)
+    const deployResponse = `${getApiOrigin(flags)}/deploy`
 
     const body = fs.readFileSync(archivePath)
     try {
-      const {data} = await axios.get(deployApiUrl, {
+      const {data} = await axios.get(deployResponse, {
         headers: {
           'auth-provider': 'dbAuth',
           'Content-Type': 'application/json',
